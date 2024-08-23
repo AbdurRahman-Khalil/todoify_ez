@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    #app {
+        background-image: url("./assets/bg/bg-2.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    /* checkkbox on todo card */
+    input[type="checkbox"] {
+        appearance: none;
+
+        height: 21px;
+        width: 21px;
+        border-radius: 50%;
+        background-image: url("./assets/icons/unchecked.png");
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.3);
+
+        opacity: 0.4;
+        cursor: pointer;
+
+        transition: 0.225s ease-out;
+    }
+
+    input[type="checkbox"]:checked {
+        background-image: url("./assets/icons/checked.png");
+        filter: brightness(1);
+        opacity: 1;
+    }
+
+    /* desgining scrollbar */
+    /* width */
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: hsl(202, 66%, 50%, 0.1);
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: hsla(202, 66%, 55%);
+        border-radius: 5px;
+
+        cursor: grab;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: hsl(202, 66%, 63%);
+    }
+
+    /* Handle on click */
+    ::-webkit-scrollbar-thumb:active {
+        cursor: grabbing;
+    }
+}
