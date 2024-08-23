@@ -22,7 +22,7 @@ export const App = () => {
           <Todos />
         </main>
 
-        <footer className="text-sky-950 py-5 flex justify-center text-center">
+        <footer className="text-sky-950 pt-5 flex justify-center text-center">
           <div className="flex flex-col gap-1.5">
             <p className="font-bold tracking-wide">{`Developed by Me :)`}</p>
             <div className="flex items-center gap-6 font-medium">
