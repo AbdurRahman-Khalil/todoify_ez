@@ -10,7 +10,7 @@ import { BiLogoGmail } from "react-icons/bi";
 export const App = () => {
   return (
     <div id="app" className="min-h-dvh font-montserrat">
-      <div className="container mx-auto px-6 pb-5 duration-200 ease-linear">
+      <div className="container mx-auto px-6 pb-6 duration-200 ease-linear">
 
         <header>
           <Logo />
