@@ -23,20 +23,20 @@ export const App = () => {
         </main>
 
         <footer className="text-sky-950 pt-5 flex justify-center text-center">
-          <div className="flex flex-col gap-1.5">
+          <div className="flex flex-col gap-2">
             <p className="font-bold tracking-wide">{`Developed by Me :)`}</p>
-            <div className="flex items-center gap-6 font-medium">
+            <div className="flex justify-center items-center gap-x-6 gap-y-2.5 flex-wrap font-medium">
               <div className="flex items-center gap-1">
                 <BiLogoGmail className="text-sky-800" />
-                <a href="https://m.abdurrahmankhalil2@gmail.com" target="_blank">m.abdurrahmankhalil2@gmail.com</a>
+                <a className="max-[395px]:text-[0.9rem] max-[363px]:text-[0.882rem] " href="https://m.abdurrahmankhalil2@gmail.com" target="_blank">m.abdurrahmankhalil2@gmail.com</a>
               </div>
               <div className="flex items-center gap-1">
                 <FaGithubSquare className="rounded-full text-sky-800" />
-                <a className="mt-0.5" href="https://github.com/AbdurRahman-Khalil" target="_blank">https://github.com/AbdurRahman-Khalil</a>
+                <a className="max-[395px]:text-[0.9rem] max-[363px]:text-[0.882rem] mt-0.5" href="https://github.com/AbdurRahman-Khalil" target="_blank">github.com/AbdurRahman-Khalil</a>
               </div>
-              <div className="flex items-center gap-1 ">
+              <div className="flex items-center gap-1">
                 <FaLinkedin className="text-sky-800" />
-                <a className="mt-0.5" href="https://tinyurl.com/2unxpbnu" target="_blank">https://tinyurl.com/2unxpbnu</a>
+                <a className="max-[395px]:text-[0.9rem] max-[363px]:text-[0.882rem] mt-0.5" href="https://tinyurl.com/2unxpbnu" target="_blank">https://tinyurl.com/2unxpbnu</a>
               </div>
             </div>
           </div>
