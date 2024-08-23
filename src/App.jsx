@@ -1,5 +1,5 @@
 import { Logo } from "./components/Logo";
-import { Menu } from "./components/Menu/Menu";
+import { Menu } from "./components/menu/Menu";
 import { TodoForm } from "./components/todos/TodoForm";
 import { Todos } from "./components/todos/Todos";
 
