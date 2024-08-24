@@ -30,7 +30,7 @@ export const TodoForm = () => {
 
         const newTodo = {
             id: uuidv4(),
-            todo: todo.trim(),
+            todo: todo,
             addedOn: `${month} ${date}, ${year}`,
             isCompleted: false,
         }
