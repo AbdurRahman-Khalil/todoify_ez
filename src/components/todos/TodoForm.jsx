@@ -61,12 +61,12 @@ export const TodoForm = () => {
             <button 
                 type="submit"
                 className="flex items-center font-medium tracking-wide text-[1.05rem] text-slate-50
-                p-[0.75rem] pb-[0.7rem] rounded-xl
+                p-[0.9rem] pb-[0.81rem] rounded-xl
                 bg-gradient-to-r from-cyan-400 to-sky-500
                 hover:bg-gradient-to-r hover:from-cyan-500/75 hover:to-sky-600/75
                 duration-200 ease-linear"
             >
-                <HiPlus className="text-[1.7rem] mb-0.5" />
+                <HiPlus className="text-[1.6rem] mb-0.5" />
             </button>
         </form>
     );

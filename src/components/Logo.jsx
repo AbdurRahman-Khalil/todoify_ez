@@ -1,9 +1,9 @@
 
 export const Logo = () => {
     return (
-        <div className="py-10">
+        <div className="pb-10 pt-8">
 
-            <h1 className="text-[3rem] font-semibold font-montserrat duration-200 ease-linear">
+            <h1 className="text-[3.3rem] font-semibold font-oregano tracking-wider duration-200 ease-linear">
                 TodoifyEz
             </h1>
         </div>
