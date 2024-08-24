@@ -4,7 +4,7 @@ import useTodosStore from "../../store/TodosStore";
 
 import { MdOutlineDelete } from "react-icons/md";
 import { LuCalendarDays } from "react-icons/lu";
-// import { IoClose } from "react-icons/io5";
+
 
 
 export const TodoModal = () => {
@@ -37,7 +37,8 @@ export const TodoModal = () => {
             className="fixed inset-0 z-30 bg-slate-800/10 backdrop-blur-lg flex items-center justify-center"
         >
             <div
-                className="relative max-w-[40rem] flex flex-col justify-between px-[1.2rem] py-[1.155rem] mx-8 text-slate-700 bg-slate-50/90 backdrop-blur-lg border border-slate-800/10 rounded-lg duration-200 ease-linear"
+                className="relative max-w-[40rem] flex flex-col justify-between px-[1.2rem] py-[1.155rem] mx-8 text-slate-700 bg-slate-50/90 backdrop-blur-lg border border-slate-800/10 rounded-lg 
+                todo-enter duration-200 ease-linear"
             >
                 {/* <button
                     onClick={closeModal}

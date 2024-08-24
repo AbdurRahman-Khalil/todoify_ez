@@ -18,7 +18,8 @@ export const Todo = ({ id, todo, addedOn, isCompleted }) => {
 
     return (
         <div
-            className="flex flex-col justify-between text-slate-800 px-4 py-3.5 bg-slate-50/40 backdrop-blur-lg border-2 border-slate-100/40 rounded-lg duration-200 ease-linear"
+            className="todo flex flex-col justify-between text-slate-800 px-4 py-3.5 bg-slate-50/40 backdrop-blur-lg border-2 border-slate-100/40 rounded-lg
+            todo-enter duration-200 ease-linear"
         >
             <div className="flex justify-between items-center mb-0.5">
                 <div className="flex items-center gap-1">
@@ -45,7 +46,10 @@ export const Todo = ({ id, todo, addedOn, isCompleted }) => {
                 >
                     {isCompleted ? "Completed" : "inComplete"}
                 </p>
-                <button onClick={() => deleteTodo(id)}>
+                <button onClick={() => {
+                    deleteTodo(id);
+                    // document.querySelector(".todo").classList.add("todo-exit")
+                }}>
                     <MdOutlineDelete
                         className="text-[1.5rem] text-red-400 hover:text-red-500 hover:scale-105 duration-200 ease-linear"
                     />

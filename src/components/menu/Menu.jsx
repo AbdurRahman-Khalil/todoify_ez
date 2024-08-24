@@ -39,7 +39,7 @@ export const Menu = () => {
                 ref={menuRef}
                 className={`sm:static sm:flex sm:items-center sm:gap-8 sm:space-y-0 sm:border-0 sm:bg-transparent sm:backdrop-blur-0 sm:p-0
                 space-y-3 absolute top-[0.67rem] left-9 z-20 rounded-xl border-2 border-slate-50/35 bg-slate-100/[50%] backdrop-blur-xl px-[1.12rem] py-3.5
-                duration-200 ease-in transform transition-all 
+                duration-200 ease-out transform transition-all 
                 ${isMenuOpen
                         ? "max-[639px]:opacity-100 max-[639px]:scale-100"
                         : "max-[639px]:opacity-0 max-[639px]:scale-95 max-[639px]:pointer-events-none"
