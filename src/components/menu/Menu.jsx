@@ -31,7 +31,7 @@ export const Menu = () => {
 
 
     return (
-        <ul className="relative flex justify-between items-center mb-6 mt-10 ml-1 list-none duration-200 ease-linear">
+        <ul className="relative flex gap-[2.3rem] sm:gap-[3.88rem] justify-between items-center mb-6 mt-10 ml-1 list-none duration-200 ease-linear">
             <MenuBtn handleIsMenuOpen={handleIsMenuOpen} />
 
             <div
