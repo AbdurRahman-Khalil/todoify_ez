@@ -2,9 +2,9 @@ import useTodosStore from "../../store/TodosStore";
 
 import { Todo } from "./Todo";
 import { TodoModal } from "./TodoModal";
+import { ClearTodosModal } from "./ClearTodosModal";
 
 import { BsFiles } from "react-icons/bs";
-
 
 
 export const Todos = () => {
@@ -48,6 +48,7 @@ export const Todos = () => {
                 }
             </section>
             <TodoModal />
+            <ClearTodosModal />
         </>
     );
 };

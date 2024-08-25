@@ -1,10 +1,9 @@
 import { Logo } from "./components/Logo";
-import { Menu } from "./components/menu/Menu";
 import { TodoForm } from "./components/todos/TodoForm";
+import { Menu } from "./components/menu/Menu";
 import { Todos } from "./components/todos/Todos";
 import { ClearBtn } from "./components/menu/ClearBtn";
 import { FooterContent } from "./components/FooterContent";
-
 
 
 export const App = () => {

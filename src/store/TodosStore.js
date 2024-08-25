@@ -13,7 +13,9 @@ const TodosStore = (set) => ({
 
     todoId: null,
     isModalOpen: false,
-    
+
+    isClearTodosModalOpen: false,
+
 
     // Actions
     setTodo: (todo) => {
@@ -88,6 +90,18 @@ const TodosStore = (set) => ({
     closeModal: () => {
         set(() => (
             { todoId: null, isModalOpen: false }
+        ));
+    },
+
+    openClearTodosModalOpen: () => {
+        set(() => (
+            { isClearTodosModalOpen: true }
+        ));
+    },
+
+    closeClearTodosModalOpen: () => {
+        set(() => (
+            { isClearTodosModalOpen: false }
         ));
     },
 
