@@ -20,9 +20,9 @@ export const MenuItem = ({ tabName }) => {
     return (
         <li
             id={tabName}
-            className={`relative text-lg font-semibold tracking-wide duration-200 ease-linear before:opacity-0
+            className={`relative text-[1.1rem] font-semibold tracking-wide duration-200 ease-linear before:opacity-0
                 ${tab === tabName ? 
-                    "text-sky-600 before:absolute before:-bottom-0.5 before:left-0 before:w-full before:h-[0.15rem] before:rounded-full before:bg-sky-600 sm:before:opacity-100 before:duration-200 before:ease-linear" : 
+                    "text-sky-600 before:absolute before:-bottom-0.5 before:left-0 before:w-full before:h-[0.2rem] before:rounded-full before:bg-sky-600 sm:before:opacity-100 before:duration-200 before:ease-linear" : 
                     "text-sky-900"}
             `}
             role="button"

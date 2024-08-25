@@ -8,15 +8,16 @@ import { BsFiles } from "react-icons/bs";
 
 
 export const Todos = () => {
-    const { filteredTodos } = useTodosStore((state) => ({
-        filteredTodos: state.filteredTodos
+    const { filteredTodos, searchQuery } = useTodosStore((state) => ({
+        filteredTodos: state.filteredTodos,
+        searchQuery: state.searchQuery,
     }));
 
 
     return (
         <>
-            <section className={`mb-7 duration-200 ease-linear ${filteredTodos.length === 0 ? 
-                "flex justify-center items-center" : 
+            <section className={`mb-7 duration-200 ease-linear ${filteredTodos.length === 0 ?
+                "flex justify-center items-center" :
                 "grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"}
             `}>
                 {filteredTodos.length === 0 ? (
@@ -25,15 +26,25 @@ export const Todos = () => {
                         <BsFiles className="text-[2.5rem]" />
                         <p className="text-xl font-medium tracking-wide">No Todos to Display</p>
                     </div>
-                ) : (filteredTodos.map(todo => (
-                    <Todo
-                        key={todo.id}
-                        id={todo.id}
-                        todo={todo.todo}
-                        addedOn={todo.addedOn}
-                        isCompleted={todo.isCompleted}
-                    />
-                )))
+                ) : (
+                    filteredTodos.filter(todo => {
+                        const lowercasedQuery = searchQuery.trim().toLowerCase();
+
+                        return lowercasedQuery === ""
+                            ?
+                            todo
+                            :
+                            todo.todo.toLowerCase().includes(lowercasedQuery) ||
+                            todo.addedOn.toLowerCase().includes(lowercasedQuery)
+                    }).map(todo => (
+                        <Todo
+                            key={todo.id}
+                            id={todo.id}
+                            todo={todo.todo}
+                            addedOn={todo.addedOn}
+                            isCompleted={todo.isCompleted}
+                        />
+                    )))
                 }
             </section>
             <TodoModal />

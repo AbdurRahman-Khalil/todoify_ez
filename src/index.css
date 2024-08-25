@@ -41,14 +41,10 @@
 
     /* Todo */
     .todo-enter {
-        animation: fadeInScale 0.4s ease forwards;
+        animation: fadeInTodo 0.4s ease forwards;
     }
 
-    /* .todo-exit {
-        animation: fadeOutScale 0.3s ease forwards;
-    } */
-
-    @keyframes fadeInScale {
+    @keyframes fadeInTodo {
         0% {
             opacity: 0;
             transform: scale(0.9);
@@ -59,6 +55,10 @@
             transform: scale(1);
         }
     }
+
+    /* .todo-exit {
+        animation: fadeOutScale 0.3s ease forwards;
+    } */
 
     /* @keyframes fadeOutScale {
         0% {
@@ -71,6 +71,22 @@
             transform: scale(0.95);
         }
     } */
+
+    .todo-modal {
+        animation: fadeInModal 0.25s ease forwards;
+    }
+
+    @keyframes fadeInModal {
+        0% {
+            opacity: 0;
+            /* backdrop-filter: blur(0rem); */
+        }
+
+        100% {
+            opacity: 1;
+            /* backdrop-filter: blur(1rem); */
+        }
+    }
 
 
     /* desgining scrollbar */

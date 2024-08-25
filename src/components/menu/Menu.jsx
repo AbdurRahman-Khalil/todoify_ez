@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from "react";
 
 import { MenuBtn } from "./MenuBtn";
 import { MenuItem } from "./MenuItem";
-import { ClearBtn } from "./ClearBtn";
+import { SearchBar } from "./SearchBar";
 
 
 
@@ -31,26 +31,26 @@ export const Menu = () => {
 
 
     return (
-        <ul className="relative flex justify-between mb-6 mt-10 mx-1 list-none duration-200 ease-linear">
+        <ul className="relative flex justify-between items-center mb-6 mt-10 ml-1 list-none duration-200 ease-linear">
             <MenuBtn handleIsMenuOpen={handleIsMenuOpen} />
 
             <div
                 id="menu"
                 ref={menuRef}
-                className={`sm:static sm:flex sm:items-center sm:gap-8 sm:space-y-0 sm:border-0 sm:bg-transparent sm:backdrop-blur-0 sm:p-0
-                space-y-3 absolute top-[0.67rem] left-9 z-20 rounded-xl border-2 border-slate-50/35 bg-slate-100/[50%] backdrop-blur-xl px-[1.12rem] py-3.5
-                duration-200 ease-out transform transition-all 
-                ${isMenuOpen
+                className={`sm:static sm:flex sm:items-center sm:gap-[1.65rem] sm:space-y-0 sm:border-0 sm:bg-transparent sm:backdrop-blur-0 sm:p-0
+                    space-y-3 absolute top-[0.67rem] left-9 z-20 rounded-xl border-2 border-slate-50/35 bg-slate-100/[50%] backdrop-blur-xl px-[1.12rem] py-3.5
+                    duration-200 ease-out transform transition-all 
+                    ${isMenuOpen
                         ? "max-[639px]:opacity-100 max-[639px]:scale-100"
                         : "max-[639px]:opacity-0 max-[639px]:scale-95 max-[639px]:pointer-events-none"
-                }`}
+                    }`}
             >
                 <MenuItem tabName={"All"} />
                 <MenuItem tabName={"Completed"} />
                 <MenuItem tabName={"inComplete"} />
             </div>
-
-            <ClearBtn />
+            
+            <SearchBar />
         </ul>
     );
 };

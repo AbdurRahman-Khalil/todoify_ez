@@ -1,4 +1,4 @@
-// import { useEffect } from "react";
+import { useEffect } from "react"
 
 import useTodosStore from "../../store/TodosStore";
 
@@ -17,6 +17,19 @@ export const TodoModal = () => {
         closeModal: state.closeModal,
     }));
 
+    
+    useEffect(() => {
+        if (isModalOpen) {
+            document.body.classList.add('overflow-hidden');
+        } else {
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        return () => {
+            document.body.classList.remove('overflow-hidden');
+        };
+    }, [isModalOpen]);
+
 
     if (!isModalOpen || !todoId) return null;
 
@@ -26,7 +39,6 @@ export const TodoModal = () => {
         }
     };
 
-
     const openedTodo = todos.find((t) => t.id === todoId);
 
 
@@ -34,7 +46,7 @@ export const TodoModal = () => {
         <div
             id="overlay"
             onClick={handleClickOutside}
-            className="fixed inset-0 z-30 bg-slate-800/10 backdrop-blur-lg flex items-center justify-center"
+            className="fixed inset-0 z-30 bg-slate-800/10 backdrop-blur-lg flex items-center justify-center todo-modal duration-200 ease-linear"
         >
             <div
                 className="relative max-w-[40rem] flex flex-col justify-between px-[1.2rem] py-[1.155rem] mx-8 text-slate-700 bg-slate-50/90 backdrop-blur-lg border border-slate-800/10 rounded-lg 
@@ -72,7 +84,7 @@ export const TodoModal = () => {
                         deleteTodo(openedTodo.id);
                         closeModal();
                     }}>
-                        <MdOutlineDelete 
+                        <MdOutlineDelete
                             className="text-[1.5rem] text-red-400 hover:text-red-500 hover:scale-105 duration-200 ease-linear"
                         />
                     </button>
@@ -85,33 +97,3 @@ export const TodoModal = () => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// useEffect(() => {
-//     if (isModalOpen) {
-//         document.body.classList.add("hidden");
-//     } else {
-//         document.body.classList.remove("hidden");
-//     }
-
-//     // Cleanup when the component is unmounted
-//     return () => {
-//         document.body.classList.remove("hidden");
-//     };
-// }, [isModalOpen]);

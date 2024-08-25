@@ -9,9 +9,11 @@ const TodosStore = (set) => ({
     filteredTodos: [],
     tab: "All",
 
+    searchQuery: "",
+
     todoId: null,
     isModalOpen: false,
-
+    
 
     // Actions
     setTodo: (todo) => {
@@ -68,6 +70,12 @@ const TodosStore = (set) => ({
     setTab: (tab) => {
         set(() => (
             { tab: tab }
+        ));
+    },
+
+    updateSearchQuery: (searchQuery) => {
+        set(() => (
+            { searchQuery: searchQuery }
         ));
     },
 
