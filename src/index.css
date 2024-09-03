@@ -102,7 +102,7 @@
 
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: hsla(202, 66%, 55%);
+        background: hsl(199, 89%, 55%);
         border-radius: 5px;
 
         cursor: grab;
@@ -110,7 +110,7 @@
 
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
-        background: hsl(202, 66%, 63%);
+        background: hsl(199, 89%, 63%);
     }
 
     /* Handle on click */

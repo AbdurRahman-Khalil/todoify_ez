@@ -4,7 +4,7 @@ import { Menu } from "./components/menu/Menu";
 import { Todos } from "./components/todos/Todos";
 import { ClearBtn } from "./components/menu/ClearBtn";
 import { FooterContent } from "./components/FooterContent";
-
+import { ScrollTop } from "./components/ScrollTop";
 
 export const App = () => {
   return (
@@ -27,6 +27,8 @@ export const App = () => {
         <footer className="text-sky-950 pt-5 flex justify-center text-center">
           <FooterContent />
         </footer>
+
+        <ScrollTop />
 
       </div>
     </div>
