@@ -32,7 +32,7 @@ export const ScrollTop = () => {
         <div>
             <button
                 onClick={scrollToTop}
-                className={`fixed bottom-4 right-4 px-2.5 pt-1 pb-1.5 rounded-full bg-sky-500/[88%] text-white text-[1.65rem] shadow-2xl hover:bg-sky-400 
+                className={`fixed bottom-4 right-4 px-2.5 pt-1 pb-1.5 rounded-full bg-sky-500/[88%] backdrop-blur-lg text-white text-[1.65rem] shadow-2xl hover:bg-sky-400 
                     ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'} transform transition-all duration-300 ease-in-out`}
                 style={{ pointerEvents: isVisible ? 'auto' : 'none' }} // Prevent clicking when hidden
             >

@@ -24,7 +24,7 @@ export const App = () => {
           </div>
         </main>
 
-        <footer className="text-sky-950 pt-5 flex justify-center text-center">
+        <footer className="text-sky-950 mt-10 flex justify-center text-center duration-200 ease-linear">
           <FooterContent />
         </footer>
 

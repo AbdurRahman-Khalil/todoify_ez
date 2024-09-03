@@ -16,7 +16,7 @@ export const Todos = () => {
 
     return (
         <>
-            <section className={`mb-7 duration-200 ease-linear ${filteredTodos.length === 0 ?
+            <section className={`mb-8 duration-200 ease-linear ${filteredTodos.length === 0 ?
                 "flex justify-center items-center" :
                 "grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"}
             `}>
