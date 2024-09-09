@@ -17,7 +17,7 @@ export const Todo = ({ id, todo, addedOn, isCompleted }) => {
 
 
     return (
-        <div
+        <li
             className="todo flex flex-col justify-between text-slate-800 px-4 py-3.5 bg-slate-50/40 backdrop-blur-lg border-2 border-slate-100/40 rounded-lg
             todo-enter duration-200 ease-linear"
         >
@@ -55,7 +55,7 @@ export const Todo = ({ id, todo, addedOn, isCompleted }) => {
                     />
                 </button>
             </div>
-        </div>
+        </li>
     );
 };
 

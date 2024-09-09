@@ -16,7 +16,7 @@ export const Todos = () => {
 
     return (
         <>
-            <section className={`mb-8 duration-200 ease-linear ${filteredTodos.length === 0 ?
+            <ul className={`mb-8 duration-200 ease-linear list-none ${filteredTodos.length === 0 ?
                 "flex justify-center items-center" :
                 "grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"}
             `}>
@@ -46,7 +46,7 @@ export const Todos = () => {
                         />
                     )))
                 }
-            </section>
+            </ul>
             <TodoModal />
             <ClearTodosModal />
         </>
