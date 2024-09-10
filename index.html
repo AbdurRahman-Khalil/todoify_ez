@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/todoify_ez/vite.svg" />
+    <link rel="manifest" href="/todoify_ez/assets/manifest-CyWdlTJh.json" />
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js");
+        });
+      }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TodoifyEz</title>
     <script type="module" crossorigin src="/todoify_ez/assets/index-Dmo6hijd.js"></script>
