@@ -36,10 +36,11 @@ export const Todos = () => {
                             :
                             todo.todo.toLowerCase().includes(lowercasedQuery) ||
                             todo.addedOn.toLowerCase().includes(lowercasedQuery)
-                    }).map(todo => (
+                    }).map((todo, ind) => (
                         <Todo
                             key={todo.id}
                             id={todo.id}
+                            index={ind}
                             todo={todo.todo}
                             addedOn={todo.addedOn}
                             isCompleted={todo.isCompleted}

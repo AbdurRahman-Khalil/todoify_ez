@@ -47,7 +47,7 @@ export const ClearTodosModal = () => {
                 >Are you sure want to delete Completed Todos?</p>
                 <div className="flex gap-4 justify-center">
                     <button
-                        className="text-slate-700 hover:text-slate-50 font-semibold hover:font-medium tracking-wider flex-1 px-5 py-3 bg-transparent hover:bg-slate-700 border-2 border-slate-700 rounded-xl duration-200 ease-linear"
+                        className="text-slate-50 hover:text-slate-700 font-medium hover:font-semibold tracking-wider flex-1 px-5 py-3 bg-slate-700 hover:bg-transparent border-2 border-slate-700 rounded-xl duration-200 ease-linear"
                         onClick={() => closeClearTodosModalOpen()}
                     >
                         Cancel

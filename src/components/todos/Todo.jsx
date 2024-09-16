@@ -6,7 +6,7 @@ import { LuCalendarDays } from "react-icons/lu";
 
 
 
-export const Todo = ({ id, todo, addedOn, isCompleted }) => {
+export const Todo = ({ id, index, todo, addedOn, isCompleted }) => {
     const { deleteTodo, checkTodo, openModal } = useTodosStore((state) => ({
         deleteTodo: state.deleteTodo,
         checkTodo: state.checkTodo,
@@ -38,7 +38,7 @@ export const Todo = ({ id, todo, addedOn, isCompleted }) => {
                 onClick={handleClick}
                 className="text-[1.05rem] font-medium my-4 line-clamp-4 cursor-pointer"
             >
-                {todo}
+                <span className="font-bold">{`${index+1}. `}</span>{todo}
             </p>
             <div className="flex justify-between items-center mt-1.5">
                 <p

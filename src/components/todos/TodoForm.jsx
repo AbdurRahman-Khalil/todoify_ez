@@ -40,7 +40,7 @@ export const TodoForm = () => {
         }
 
         addTodo(newTodo)
-        
+
         setTodo("");
     }
 
@@ -58,13 +58,14 @@ export const TodoForm = () => {
                 value={todo}
                 onChange={(e) => setTodo(e.target.value)}
             />
-            <button 
+            <button
                 type="submit"
                 className="flex items-center font-medium tracking-wide text-[1.05rem] text-slate-50
                 p-[0.9rem] pb-[0.81rem] rounded-xl
                 bg-gradient-to-r from-cyan-400 to-sky-500
-                hover:bg-gradient-to-r hover:from-cyan-500/75 hover:to-sky-600/75
-                duration-200 ease-linear"
+                duration-[250ms] ease-linear relative z-10
+                before:absolute before:top-0 before:left-0 before:w-full before:h-full before:-z-10 before:bg-gradient-to-r before:from-cyan-400 before:to-sky-500
+                before:rounded-xl hover:before:blur-md before:active:opacity-0 before:duration-[250ms] before:ease-linear"
             >
                 <HiPlus className="text-[1.6rem] mb-0.5" />
             </button>
