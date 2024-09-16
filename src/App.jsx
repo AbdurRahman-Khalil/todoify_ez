@@ -2,9 +2,11 @@ import { Logo } from "./components/Logo";
 import { TodoForm } from "./components/todos/TodoForm";
 import { Menu } from "./components/menu/Menu";
 import { Todos } from "./components/todos/Todos";
-import { ClearBtn } from "./components/menu/ClearBtn";
+import { Count } from "./components/Count";
+import { ClearBtn } from "./components/ClearBtn";
 import { FooterContent } from "./components/FooterContent";
 import { ScrollTop } from "./components/ScrollTop";
+
 
 export const App = () => {
   return (
@@ -19,12 +21,13 @@ export const App = () => {
         <main>
           <Menu />
           <Todos />
-          <div className="text-end">
+          <div className="flex justify-between items-center max-[579px]:flex-col max-[579px]:gap-5">
+            <Count />
             <ClearBtn />
           </div>
         </main>
 
-        <footer className="text-sky-950 mt-10 flex justify-center text-center duration-200 ease-linear">
+        <footer className="text-sky-950 mt-[2.9rem] flex justify-center text-center duration-200 ease-linear">
           <FooterContent />
         </footer>
 

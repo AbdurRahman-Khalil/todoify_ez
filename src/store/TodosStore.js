@@ -17,7 +17,6 @@ const TodosStore = (set) => ({
 
     isClearTodosModalOpen: false,
 
-
     // Actions
     setTodo: (todo) => {
         set(() => (

@@ -1,4 +1,4 @@
-import useTodosStore from "../../store/TodosStore";
+import useTodosStore from "../store/TodosStore";
 
 
 export const ClearBtn = () => {
