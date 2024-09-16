@@ -8,16 +8,17 @@ import { LuCalendarDays } from "react-icons/lu";
 
 
 export const TodoModal = () => {
-    const { todos, checkTodo, deleteTodo, todoId, isModalOpen, closeModal } = useTodosStore((state) => ({
+    const { todos, checkTodo, deleteTodo, todoId, todoIndex, isModalOpen, closeModal } = useTodosStore((state) => ({
         todos: state.todos,
         checkTodo: state.checkTodo,
         deleteTodo: state.deleteTodo,
         todoId: state.todoId,
+        todoIndex: state.todoIndex,
         isModalOpen: state.isModalOpen,
         closeModal: state.closeModal,
     }));
 
-    
+
     useEffect(() => {
         if (isModalOpen) {
             document.body.classList.add('overflow-hidden');
@@ -72,7 +73,7 @@ export const TodoModal = () => {
                     />
                 </div>
                 <p className="text-[1.05rem] font-medium my-4">
-                    {openedTodo.todo}
+                    <span className="font-bold">{`${todoIndex}.`}</span> {openedTodo.todo}
                 </p>
                 <div className="flex justify-between items-center mt-1.5">
                     <p

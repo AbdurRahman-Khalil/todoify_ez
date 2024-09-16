@@ -13,7 +13,7 @@ export const Todo = ({ id, index, todo, addedOn, isCompleted }) => {
         openModal: state.openModal,
     }));
 
-    const handleClick = () => openModal(id);
+    const handleClick = () => openModal(id, index);
 
 
     return (
@@ -38,7 +38,7 @@ export const Todo = ({ id, index, todo, addedOn, isCompleted }) => {
                 onClick={handleClick}
                 className="text-[1.05rem] font-medium my-4 line-clamp-4 cursor-pointer"
             >
-                <span className="font-bold">{`${index+1}. `}</span>{todo}
+                <span className="font-bold">{`${index}.`}</span> {todo}
             </p>
             <div className="flex justify-between items-center mt-1.5">
                 <p

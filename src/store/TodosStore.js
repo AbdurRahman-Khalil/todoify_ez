@@ -12,6 +12,7 @@ const TodosStore = (set) => ({
     searchQuery: "",
 
     todoId: null,
+    todoIndex: null,
     isModalOpen: false,
 
     isClearTodosModalOpen: false,
@@ -81,9 +82,9 @@ const TodosStore = (set) => ({
         ));
     },
 
-    openModal: (id) => {
+    openModal: (id, index) => {
         set(() => (
-            { todoId: id, isModalOpen: true }
+            { todoId: id, todoIndex: index, isModalOpen: true }
         ));
     },
 

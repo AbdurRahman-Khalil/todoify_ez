@@ -40,7 +40,7 @@ export const Todos = () => {
                         <Todo
                             key={todo.id}
                             id={todo.id}
-                            index={ind}
+                            index={ind+1}
                             todo={todo.todo}
                             addedOn={todo.addedOn}
                             isCompleted={todo.isCompleted}
